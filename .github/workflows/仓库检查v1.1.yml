@@ -21,4 +21,4 @@ jobs:
       - name: Install pinned check dependencies
         run: python -m pip install -r 检查依赖v1.0.txt
       - name: Validate repository and submitted files
-        run: python scripts/仓库检查v1.0.py --check-index
+        run: python scripts/仓库检查v1.1.py --check-index

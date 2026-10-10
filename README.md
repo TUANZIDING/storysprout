@@ -4,14 +4,14 @@
 
 <h1 align="center">故事芽 · StorySprout</h1>
 <p align="center"><strong>把一本书，变成孩子愿意翻、听、读、演的故事。</strong><br>A story to explore. A page to enjoy. A voice to follow.</p>
-<p align="center"><a href="README.md">简体中文</a> · <a href="docs/英文说明v1.0.md">English</a></p>
-<p align="center"><code>v1.1.0 文档候选</code> · <code>五页内容设计</code> · <code>应用尚未实现</code></p>
+<p align="center"><a href="README.md">简体中文</a> · <a href="docs/英文说明v1.1.md">English</a></p>
+<p align="center"><code>v1.2.0 文档仓库</code> · <code>五页内容设计</code> · <code>应用尚未实现</code></p>
 <p align="center">漫画伴读 · 同源正文 · 逐句跟读脚本 · 亲子表演</p>
 <p align="center"><a href="#use-cases">使用场景</a> · <a href="#showcase">内容成果</a> · <a href="#quick-start">开始阅读</a> · <a href="#workflow">工作流</a> · <a href="#capabilities">能力状态</a> · <a href="#contribute">共创与文档</a></p>
 
 故事芽源于一次亲子伴读：孩子喜欢漫画，家长希望文字更短、图像更清楚，还能听一句、读一句。我们先把故事、画面与朗读正文整理成可审阅的内容，再逐步实现创作工具。
 
-**当前仓库交付内容方案、提示词、数据契约和检查脚本。** 首页封面是原创矢量概念图；尚无应用界面、生成插画或音频成品。完整候选建议存入私人仓库，素材范围见[素材与许可说明](docs/素材与许可说明v1.0.md)。
+**当前仓库交付内容方案、提示词、数据契约和检查脚本。** 首页封面是原创矢量概念图；尚无应用界面、生成插画或音频成品。已提交至[GitHub私人仓库](https://github.com/TUANZIDING/storysprout)，素材范围见[素材与许可说明](docs/素材与许可说明v1.1.md)。
 
 <a id="use-cases"></a>
 ## 从一个孩子的一章开始
@@ -46,10 +46,10 @@
 ```sh
 python3 -m venv .venv
 .venv/bin/python -m pip install -r 检查依赖v1.0.txt
-.venv/bin/python scripts/仓库检查v1.0.py
+.venv/bin/python scripts/仓库检查v1.1.py
 ```
 
-检查只读本地候选文件，不发送书籍或儿童数据；Git索引检查与环境说明见[协作说明](docs/协作说明v1.0.md)。
+检查只读本地候选文件，不发送书籍或儿童数据；Git索引检查与环境说明见[协作说明](docs/协作说明v1.1.md)。
 
 <a id="workflow"></a>
 ## 一份正文，五页伴读
@@ -72,31 +72,32 @@ python3 -m venv .venv
 | --- | --- |
 | 五页第一章内容方案、中英首页、创作与开发提示词 | 已整理，可本地审阅 |
 | 原创JSON、Draft 7契约、文件／引用／正文检查 | 可本地运行，实际结果见[交付检查](docs/交付检查v1.1.md) |
-| GitHub Actions | 检查流程已配置，远端尚未运行 |
+| GitHub Actions | 初次远端检查已通过；[查看当前检查结果](https://github.com/TUANZIDING/storysprout/actions) |
 | 原书核验、课程词表核对、儿童试读 | 待确认／未完成 |
 | 第一章修图、排版、音频生成与导出 | 尚未制作 |
 | Web应用、在线模型接入、自动评分 | 尚未实现 |
-| GitHub远端仓库、Release、站点部署 | 尚未执行 |
+| GitHub远端仓库 | 已提交至TUANZIDING/storysprout，私人仓库 |
+| Release、站点部署 | 尚未执行 |
 
 <details>
 <summary>检查环境与提交范围</summary>
 
 依赖锁定在[检查依赖](检查依赖v1.0.txt)。检查脚本校验本地Markdown/HTML引用、文件命名、契约、JSON引用、正文哈希、第一章正文预览和Git索引，不代替真实插画、音频或儿童试读。
 
-[提交范围清单](提交范围v1.0.json)明确候选文件；原第一章v1.0仅在本机保留，私人PDF、视频、录音、密钥和运行环境不进入候选。暂存后运行：
+[提交范围清单](提交范围v1.1.json)明确候选文件；原第一章v1.0仅在本机保留，私人PDF、视频、录音、密钥和运行环境不进入候选。暂存后运行：
 
 ```sh
-.venv/bin/python scripts/仓库检查v1.0.py --check-index
+.venv/bin/python scripts/仓库检查v1.1.py --check-index
 ```
 
-[提交说明](docs/GitHub发布说明v1.1.md)说明当前分支、私有仓库建议和远端核验边界。
+[提交说明](docs/GitHub发布说明v1.2.md)说明当前分支、私有仓库建议和远端核验边界。
 
 </details>
 
 <a id="contribute"></a>
 ## 共创与文档索引
 
-先读[协作说明](docs/协作说明v1.0.md)，用最小原创示例描述问题、修改与验证。修改内容时保留来源边界和正文ID。开发规格是后续输入，不是本轮自动启动开发的指令。
+先读[协作说明](docs/协作说明v1.1.md)，用最小原创示例描述问题、修改与验证。修改内容时保留来源边界和正文ID。开发规格是后续输入，不是本轮自动启动开发的指令。
 
 | 文档 | 用途 |
 | --- | --- |
@@ -108,11 +109,11 @@ python3 -m venv .venv
 | [样章观察与改进](docs/样章观察与改进v1.0.md) | 原样章观察与改进依据 |
 | [项目数据契约](contracts/项目数据契约v1.0.json)／[原创样例](examples/原创故事样例v1.0.json) | 数据骨架与独立示例 |
 | [技术参考](docs/技术参考v1.0.md)／[既有路线图](docs/实施路线图v1.0.md) | 历史开发参考，按未来指令使用 |
-| [素材与许可](docs/素材与许可说明v1.0.md) | 来源、私人材料与许可状态 |
-| [提交说明v1.1](docs/GitHub发布说明v1.1.md)／[交付检查v1.1](docs/交付检查v1.1.md) | 当前仓库候选及实际核验结果 |
+| [素材与许可](docs/素材与许可说明v1.1.md) | 来源、私人材料与许可状态 |
+| [提交说明v1.2](docs/GitHub发布说明v1.2.md)／[远端提交记录](docs/远端提交记录v1.0.md) | 当前仓库信息与远端核验结果 |
 
-[首页v1.0](READMEv1.0.md)、[提交说明v1.0](docs/GitHub发布说明v1.0.md)和[检查v1.0](docs/交付检查v1.0.md)保留历史记录，当前入口以本页为准。自主命名文件采用“自然名称＋版本号＋扩展名”；README.md与.gitignore为工具固定入口。
+[首页v1.1](READMEv1.1.md)、[首页v1.0](READMEv1.0.md)、[提交说明v1.0](docs/GitHub发布说明v1.0.md)和[检查v1.0](docs/交付检查v1.0.md)保留历史记录，当前入口以本页为准。自主命名文件采用“自然名称＋版本号＋扩展名”；README.md与.gitignore为工具固定入口。
 
 ---
 
-维护者：[Haixiang Ding（丁海祥）· TUANZIDING](https://github.com/TUANZIDING)。本项目来自用户与Hark的亲子伴读构想；概念封面为本仓库原创SVG。未选择开源许可证，当前候选也未公开发布。第三方作品的来源和使用范围见[素材与许可说明](docs/素材与许可说明v1.0.md)。
+维护者：[Haixiang Ding（丁海祥）· TUANZIDING](https://github.com/TUANZIDING)。本项目来自用户与Hark的亲子伴读构想；概念封面为本仓库原创SVG。未选择开源许可证，已提交至私人仓库，尚未公开发布。第三方作品的来源和使用范围见[素材与许可说明](docs/素材与许可说明v1.1.md)。
