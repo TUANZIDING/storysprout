@@ -1,0 +1,1177 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "titleZh": {
+      "type": "string",
+      "minLength": 1
+    },
+    "createdOn": {
+      "type": "string",
+      "format": "date"
+    },
+    "contentStatus": {
+      "type": "string",
+      "enum": [
+        "storyboardOnly",
+        "mediaDraft",
+        "readyForPrivateReading",
+        "reviewedForPublicDemo"
+      ]
+    },
+    "rights": {
+      "$ref": "#/definitions/rights"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/source"
+      },
+      "minItems": 1
+    },
+    "readerProfile": {
+      "$ref": "#/definitions/reader"
+    },
+    "characters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/character"
+      },
+      "minItems": 1
+    },
+    "chapters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/chapter"
+      },
+      "minItems": 1
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/asset"
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "revision",
+    "titleZh",
+    "createdOn",
+    "contentStatus",
+    "rights",
+    "sources",
+    "readerProfile",
+    "characters",
+    "chapters",
+    "assets"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "故事芽项目数据契约 v1.0",
+  "description": "交换项目内容的最小骨架。引用、正文 hash、跨页道具一致性与媒体有效性另做语义验证。",
+  "definitions": {
+    "bounds": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "y": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "w": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "h": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "w",
+        "h"
+      ],
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "original",
+            "providedText",
+            "providedSummary",
+            "ocr",
+            "existingAdaptation"
+          ]
+        },
+        "language": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verificationStatus": {
+          "type": "string",
+          "enum": [
+            "authorCreated",
+            "userConfirmed",
+            "unverified"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "language",
+        "locator",
+        "text",
+        "verificationStatus"
+      ],
+      "additionalProperties": false
+    },
+    "rights": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "original",
+            "licensed",
+            "publicDomainVerified",
+            "unknown"
+          ]
+        },
+        "useScope": {
+          "type": "string",
+          "enum": [
+            "privateStudy",
+            "publicDemo",
+            "licensedDistribution"
+          ]
+        },
+        "publicDistributionAllowed": {
+          "type": "boolean"
+        },
+        "evidenceNote": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "status",
+        "useScope",
+        "publicDistributionAllowed",
+        "evidenceNote"
+      ],
+      "additionalProperties": false
+    },
+    "reader": {
+      "type": "object",
+      "properties": {
+        "age": {
+          "type": "integer",
+          "minimum": 3,
+          "maximum": 18
+        },
+        "storyLanguage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "supportLanguage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "curriculumClaim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "curriculumVerified": {
+          "type": "boolean"
+        },
+        "knownVocabulary": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "knownVocabularyStatus": {
+          "type": "string",
+          "enum": [
+            "providedDemoProfile",
+            "parentConfirmed",
+            "unknown"
+          ]
+        },
+        "allowedPatterns": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "maxWordsPerBubble": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "focusWordTarget": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maxNewLemmas": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "nameVocabulary": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "practicePauseMs": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 30000
+        }
+      },
+      "required": [
+        "age",
+        "storyLanguage",
+        "supportLanguage",
+        "curriculumClaim",
+        "curriculumVerified",
+        "knownVocabulary",
+        "knownVocabularyStatus",
+        "allowedPatterns",
+        "maxWordsPerBubble",
+        "focusWordTarget",
+        "maxNewLemmas",
+        "nameVocabulary",
+        "practicePauseMs"
+      ],
+      "additionalProperties": false
+    },
+    "character": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "displayNameZh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "displayNameEn": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "speciesZh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "personality": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lockedTraits": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "voiceBrief": {
+          "type": "string",
+          "minLength": 1
+        },
+        "referenceAssetIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "id",
+        "displayNameZh",
+        "displayNameEn",
+        "revision",
+        "speciesZh",
+        "personality",
+        "lockedTraits",
+        "voiceBrief",
+        "referenceAssetIds"
+      ],
+      "additionalProperties": false
+    },
+    "audio": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "notGenerated",
+            "previewOnly",
+            "ready",
+            "failed",
+            "stale"
+          ]
+        },
+        "assetId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "alignmentSource": {
+          "type": "string",
+          "enum": [
+            "none",
+            "playbackLifecycle",
+            "providerSentence",
+            "providerWord",
+            "measuredSegments",
+            "humanVerified"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "assetId",
+        "alignmentSource"
+      ],
+      "additionalProperties": false
+    },
+    "utterance": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "speakerId": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "dialogue",
+            "narration",
+            "word"
+          ]
+        },
+        "language": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "supportText": {
+          "type": "string"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "textHash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "sourceRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "minItems": 0
+        },
+        "adaptationTag": {
+          "type": "string",
+          "enum": [
+            "retained",
+            "teachingRewrite",
+            "originalAddition",
+            "original",
+            "unverified"
+          ]
+        },
+        "wordCount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "audio": {
+          "$ref": "#/definitions/audio"
+        }
+      },
+      "required": [
+        "id",
+        "speakerId",
+        "kind",
+        "language",
+        "text",
+        "supportText",
+        "revision",
+        "textHash",
+        "sourceRefs",
+        "adaptationTag",
+        "wordCount",
+        "audio"
+      ],
+      "additionalProperties": false
+    },
+    "bubble": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "utteranceId": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "speech",
+            "thought",
+            "caption"
+          ]
+        },
+        "bounds": {
+          "$ref": "#/definitions/bounds"
+        }
+      },
+      "required": [
+        "id",
+        "utteranceId",
+        "kind",
+        "bounds"
+      ],
+      "additionalProperties": false
+    },
+    "panel": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "readingOrder": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "bounds": {
+          "$ref": "#/definitions/bounds"
+        },
+        "characterIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "minItems": 0
+        },
+        "sourceRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "minItems": 0
+        },
+        "actionZh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "emotionZh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "artBriefZh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "imageAssetId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "soundEffects": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "bubbles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/bubble"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "id",
+        "readingOrder",
+        "bounds",
+        "characterIds",
+        "sourceRefs",
+        "actionZh",
+        "emotionZh",
+        "artBriefZh",
+        "imageAssetId",
+        "soundEffects",
+        "bubbles"
+      ],
+      "additionalProperties": false
+    },
+    "targetObject": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "labelZh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "vocabularyId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "appearanceZh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expectedCount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "bounds": {
+          "$ref": "#/definitions/bounds"
+        },
+        "verificationStatus": {
+          "type": "string",
+          "enum": [
+            "proposed",
+            "verified",
+            "unverified"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "labelZh",
+        "vocabularyId",
+        "appearanceZh",
+        "expectedCount",
+        "bounds",
+        "verificationStatus"
+      ],
+      "additionalProperties": false
+    },
+    "page": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "comic",
+            "panorama",
+            "words",
+            "readAlong",
+            "activity"
+          ]
+        },
+        "titleZh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "screenLayout": {
+          "type": "string",
+          "enum": [
+            "portrait",
+            "landscape",
+            "adaptive"
+          ]
+        },
+        "printLayout": {
+          "type": "string",
+          "enum": [
+            "a4Portrait",
+            "a4Landscape",
+            "doubleSpread"
+          ]
+        },
+        "artBriefZh": {
+          "type": "string"
+        },
+        "imageAssetId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "panels": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/panel"
+          },
+          "minItems": 0
+        },
+        "utteranceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "minItems": 0
+        },
+        "vocabularyIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "minItems": 0
+        },
+        "activityIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "minItems": 0
+        },
+        "sourcePanelIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "minItems": 0
+        },
+        "targetObjects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/targetObject"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "id",
+        "role",
+        "titleZh",
+        "screenLayout",
+        "printLayout",
+        "artBriefZh",
+        "imageAssetId",
+        "panels",
+        "utteranceIds",
+        "vocabularyIds",
+        "activityIds",
+        "sourcePanelIds",
+        "targetObjects"
+      ],
+      "additionalProperties": false
+    },
+    "vocabulary": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "lemma": {
+          "type": "string",
+          "minLength": 1
+        },
+        "displayText": {
+          "type": "string",
+          "minLength": 1
+        },
+        "meaningZh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "isFocus": {
+          "type": "boolean"
+        },
+        "newToReader": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "pronunciationUtteranceId": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "exampleUtteranceId": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "ipa": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ipaSource": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "imageSource": {
+          "$ref": "#/definitions/imageSource"
+        }
+      },
+      "required": [
+        "id",
+        "lemma",
+        "displayText",
+        "meaningZh",
+        "isFocus",
+        "newToReader",
+        "pronunciationUtteranceId",
+        "exampleUtteranceId",
+        "ipa",
+        "ipaSource",
+        "imageSource"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "source",
+            "utterance",
+            "object",
+            "vocabulary"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        }
+      },
+      "required": [
+        "kind",
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "activity": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "fillBubble",
+            "findObject",
+            "rolePlay",
+            "matching",
+            "comprehension"
+          ]
+        },
+        "promptZh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "utteranceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "minItems": 0
+        },
+        "blankTokenIndices": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "minItems": 0
+        },
+        "targetObjectIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "minItems": 0
+        },
+        "roleIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "minItems": 0
+        },
+        "answer": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "answerVisibility": {
+          "type": "string",
+          "enum": [
+            "parentOnly",
+            "none"
+          ]
+        },
+        "evidenceRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/evidence"
+          },
+          "minItems": 0
+        },
+        "verificationStatus": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "verified",
+            "unverified"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "promptZh",
+        "utteranceIds",
+        "blankTokenIndices",
+        "targetObjectIds",
+        "roleIds",
+        "answer",
+        "answerVisibility",
+        "evidenceRefs",
+        "verificationStatus"
+      ],
+      "additionalProperties": false
+    },
+    "chapter": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "titleZh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceRefs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "minItems": 1
+        },
+        "summaryZh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "utterances": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/utterance"
+          },
+          "minItems": 1
+        },
+        "audioOrder": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "minItems": 1
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/page"
+          },
+          "minItems": 1
+        },
+        "vocabulary": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/vocabulary"
+          },
+          "minItems": 0
+        },
+        "activities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/activity"
+          },
+          "minItems": 0
+        },
+        "reviewNotes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "id",
+        "revision",
+        "titleZh",
+        "sourceRefs",
+        "summaryZh",
+        "utterances",
+        "audioOrder",
+        "pages",
+        "vocabulary",
+        "activities",
+        "reviewNotes"
+      ],
+      "additionalProperties": false
+    },
+    "asset": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "image",
+            "audio",
+            "font"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "planned",
+            "ready",
+            "failed",
+            "stale"
+          ]
+        },
+        "fileName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[^_/\\\\]+v[0-9]+\\.[0-9]+(?:\\.[0-9]+)?\\.[a-zA-Z0-9]+$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "storageRef": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "durationMs": {
+          "anyOf": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "dependencyHashes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "provenanceNote": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "status",
+        "fileName",
+        "storageRef",
+        "sha256",
+        "durationMs",
+        "dependencyHashes",
+        "provenanceNote"
+      ],
+      "additionalProperties": false
+    },
+    "imageSource": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "panel",
+            "object",
+            "asset",
+            "none"
+          ]
+        },
+        "id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9-]*$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "id"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

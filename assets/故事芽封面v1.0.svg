@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="650" viewBox="0 0 1600 650" role="img" aria-labelledby="title desc">
+<title id="title">StorySprout concept cover</title><desc id="desc">A warm paper composition of a six-panel book, a green door, a red suitcase, a rock, and an audio waveform. This is a documentation concept image, not an application screenshot.</desc>
+<defs><pattern id="dots" x="0" y="0" width="42" height="42" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="2" fill="#E7DBC7" opacity=".5"/></pattern><filter id="shadow" x="-.2" y="-.2" width="1.4" height="1.4"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#A58E72" flood-opacity=".16"/></filter></defs>
+<rect width="1600" height="650" fill="#FFF8ED"/><rect width="1600" height="650" fill="url(#dots)"/>
+<path d="M-30 520 Q300 660 670 525 T1630 510" fill="none" stroke="#DFEBDF" stroke-width="95" opacity=".65"/>
+<circle cx="1420" cy="105" r="155" fill="#FBE0C9" opacity=".8"/><circle cx="175" cy="60" r="110" fill="#E6EFEC"/>
+<g transform="translate(128 93) rotate(-4 365 240)" filter="url(#shadow)">
+<rect x="0" y="8" width="720" height="477" rx="32" fill="#1F4E48"/><rect x="16" y="0" width="694" height="462" rx="25" fill="#FFFDF7"/>
+<path d="M364 12 V451" stroke="#D9D1C3" stroke-width="3"/><path d="M25 446 Q190 411 364 447 Q535 411 697 446" fill="none" stroke="#E5D8C6" stroke-width="8"/>
+<rect x="42" y="30" width="284" height="58" rx="15" fill="#ED8452"/>
+<path d="M64 58 H200 M64 72 H135" stroke="#FFFDF7" stroke-width="7" stroke-linecap="round"/>
+<g stroke="#294942" stroke-width="3">
+<rect x="44" y="112" width="127" height="88" rx="12" fill="#EAF2DC"/><rect x="188" y="112" width="127" height="88" rx="12" fill="#E3EEF4"/>
+<rect x="44" y="214" width="127" height="88" rx="12" fill="#FFF0D1"/><rect x="188" y="214" width="127" height="88" rx="12" fill="#F7DEDA"/>
+<rect x="44" y="316" width="127" height="88" rx="12" fill="#E3EEF4"/><rect x="188" y="316" width="127" height="88" rx="12" fill="#EAF2DC"/>
+</g>
+<g fill="#FFFDF7" stroke="#294942" stroke-width="2"><path d="M64 130 h82 v26 H112 l-15 12 v-12 H64 Z"/><path d="M206 233 h88 v25 H256 l-12 12 v-12 H206 Z"/><path d="M61 332 h88 v27 H103 l-12 10 v-10 H61 Z"/></g>
+<g transform="translate(220 125)"><rect width="62" height="61" rx="7" fill="#739D6C" stroke="#294942" stroke-width="3"/><rect x="12" y="10" width="34" height="39" rx="3" fill="#8CB57B"/><circle cx="49" cy="36" r="4" fill="#DCAD5F"/></g>
+<g transform="translate(78 241)"><path d="M0 35 12 9 43 0 58 31 35 44Z" fill="#BFB5C1" stroke="#294942" stroke-width="3"/><path d="M12 9 31 27 43 0 M31 27 35 44" fill="none" stroke="#EEE1EE" stroke-width="2"/></g>
+<g transform="translate(212 345)"><path d="M18 3 V-3 Q18-13 32-13 Q46-13 46-3 V3" fill="none" stroke="#294942" stroke-width="4"/><rect width="70" height="43" rx="7" fill="#D85849" stroke="#294942" stroke-width="3"/><path d="M13 0 V43 M56 0 V43" stroke="#7F3E38" stroke-width="3"/></g>
+<g transform="translate(397 40)"><rect width="263" height="108" rx="18" fill="#EAF2DC"/><path d="M27 31 h132 M27 51 h196 M27 71 h168" stroke="#70968A" stroke-width="9" stroke-linecap="round"/></g>
+<g transform="translate(397 170)"><rect width="263" height="172" rx="18" fill="#F8EBD9"/><path d="M126 133 Q120 77 138 48" fill="none" stroke="#376E55" stroke-width="8"/><path d="M128 88 Q62 81 62 28 Q113 30 128 88 M131 75 Q173 18 210 47 Q186 92 131 75" fill="#7FA56D"/><path d="M50 134 H216" stroke="#D9B88F" stroke-width="4" stroke-linecap="round"/></g>
+<rect x="398" y="365" width="259" height="30" rx="15" fill="#DDE9E4"/><circle cx="415" cy="380" r="9" fill="#417469"/>
+</g>
+<g transform="translate(983 172)"><rect x="0" y="0" width="473" height="235" rx="32" fill="#FFFDF7" stroke="#D9E4DB" stroke-width="3" filter="url(#shadow)"/>
+<circle cx="78" cy="100" r="42" fill="#ED8452"/><path d="M69 76 96 100 69 124Z" fill="#FFFDF7"/>
+<g stroke="#51857B" stroke-width="9" stroke-linecap="round"><path d="M156 83 V117 M181 63 V137 M206 82 V118 M231 48 V152 M256 70 V130 M281 85 V115 M306 59 V141 M331 73 V127 M356 91 V109 M381 66 V134"/></g>
+<path d="M46 182 H218 M46 201 H155" stroke="#DDE9E4" stroke-width="9" stroke-linecap="round"/>
+</g>
+<g fill="#ED8452"><path d="M930 72 934 85 947 89 934 93 930 106 926 93 913 89 926 85Z"/><path d="M1450 470 1454 481 1465 485 1454 489 1450 500 1446 489 1435 485 1446 481Z"/></g>
+<text x="992" y="495" font-family="Verdana, sans-serif" font-size="48" font-weight="700" fill="#294942">StorySprout</text>
+<text x="995" y="536" font-family="Verdana, sans-serif" font-size="17" letter-spacing="4" fill="#64877D">A STORY, A PAGE, A VOICE</text>
+</svg>

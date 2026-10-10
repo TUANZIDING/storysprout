@@ -1,0 +1,839 @@
+{
+  "schemaVersion": "1.0",
+  "id": "red-hat-demo",
+  "revision": 1,
+  "titleZh": "红帽子在哪里？",
+  "createdOn": "2026-10-09",
+  "contentStatus": "storyboardOnly",
+  "rights": {
+    "status": "original",
+    "useScope": "publicDemo",
+    "publicDistributionAllowed": true,
+    "evidenceNote": "本次为故事芽公开演示新写的原创短故事；不含现有书籍文字或图片。实际发布另由用户决定。"
+  },
+  "sources": [
+    {
+      "id": "s01",
+      "kind": "original",
+      "language": "zh-CN",
+      "locator": "原创短故事第1段",
+      "text": "小熊豆豆戴着一顶红帽子，和小兔米米到公园玩。",
+      "verificationStatus": "authorCreated"
+    },
+    {
+      "id": "s02",
+      "kind": "original",
+      "language": "zh-CN",
+      "locator": "原创短故事第2段",
+      "text": "一阵风吹来，帽子飞走了。路旁有一个绿色盒子和一块灰色石头。",
+      "verificationStatus": "authorCreated"
+    },
+    {
+      "id": "s03",
+      "kind": "original",
+      "language": "zh-CN",
+      "locator": "原创短故事第3段",
+      "text": "米米指着绿色盒子问，这是不是豆豆的帽子。豆豆摇摇头，说那是盒子。",
+      "verificationStatus": "authorCreated"
+    },
+    {
+      "id": "s04",
+      "kind": "original",
+      "language": "zh-CN",
+      "locator": "原创短故事第4段",
+      "text": "米米看见红帽子挂在一根很低的树枝上。她站在地上就把帽子拿了下来，递给豆豆。",
+      "verificationStatus": "authorCreated"
+    },
+    {
+      "id": "s05",
+      "kind": "original",
+      "language": "zh-CN",
+      "locator": "原创短故事第5段",
+      "text": "豆豆说谢谢，两个朋友开心地笑了。他们发现帽檐上还坐着一只小瓢虫。",
+      "verificationStatus": "authorCreated"
+    }
+  ],
+  "readerProfile": {
+    "age": 7,
+    "storyLanguage": "en",
+    "supportLanguage": "zh-CN",
+    "curriculumClaim": "手工演示词表；不声明匹配新概念教材",
+    "curriculumVerified": false,
+    "knownVocabulary": [
+      "this",
+      "is",
+      "my",
+      "it",
+      "red",
+      "no",
+      "a",
+      "here",
+      "your",
+      "thank",
+      "you",
+      "yes",
+      "am",
+      "book",
+      "bag",
+      "not",
+      "on",
+      "the",
+      "green"
+    ],
+    "knownVocabularyStatus": "providedDemoProfile",
+    "allowedPatterns": [
+      "This is ...",
+      "It is ...",
+      "Is this your ...?",
+      "No, it is ...",
+      "Here is your ...",
+      "Thank you!"
+    ],
+    "maxWordsPerBubble": 8,
+    "focusWordTarget": 3,
+    "maxNewLemmas": 5,
+    "nameVocabulary": [
+      "Dodo",
+      "Bibi"
+    ],
+    "practicePauseMs": 3000
+  },
+  "characters": [
+    {
+      "id": "dodo",
+      "displayNameZh": "豆豆",
+      "displayNameEn": "Dodo",
+      "revision": 1,
+      "speciesZh": "小熊",
+      "personality": "活泼，愿意表达感谢",
+      "lockedTraits": [
+        "圆耳朵",
+        "蜂蜜棕色毛",
+        "蓝色短背带裤",
+        "一顶纯红帽子"
+      ],
+      "voiceBrief": "温和、活泼、清楚的标准声音，不模仿真人",
+      "referenceAssetIds": []
+    },
+    {
+      "id": "bibi",
+      "displayNameZh": "米米",
+      "displayNameEn": "Bibi",
+      "revision": 1,
+      "speciesZh": "小兔",
+      "personality": "细心，好奇，乐于帮助",
+      "lockedTraits": [
+        "白色毛",
+        "两只长耳朵",
+        "绿色短袖裙"
+      ],
+      "voiceBrief": "明亮、清楚、自然的标准声音，不模仿真人",
+      "referenceAssetIds": []
+    }
+  ],
+  "chapters": [
+    {
+      "id": "chapter-1",
+      "revision": 1,
+      "titleZh": "红帽子在哪里？",
+      "sourceRefs": [
+        "s01",
+        "s02",
+        "s03",
+        "s04",
+        "s05"
+      ],
+      "summaryZh": "风吹走豆豆的帽子，米米和豆豆先看错了盒子，后来从低树枝找到帽子；帽檐上还有小瓢虫。",
+      "utterances": [
+        {
+          "id": "u01",
+          "speakerId": "dodo",
+          "kind": "dialogue",
+          "language": "en",
+          "text": "This is my hat.",
+          "supportText": "这是我的帽子。",
+          "revision": 1,
+          "textHash": "70b6b5077881aa142c95fc1149c189e4315d38c6eb83043d691dd9f635df810c",
+          "sourceRefs": [
+            "s01"
+          ],
+          "adaptationTag": "original",
+          "wordCount": 4,
+          "audio": {
+            "status": "notGenerated",
+            "assetId": null,
+            "alignmentSource": "none"
+          }
+        },
+        {
+          "id": "u02",
+          "speakerId": "dodo",
+          "kind": "dialogue",
+          "language": "en",
+          "text": "It is red.",
+          "supportText": "它是红色的。",
+          "revision": 1,
+          "textHash": "ce61585e0b18d5d2bfe54ffaf74c868367e8c598318239dcd0abd7abf7ea14d6",
+          "sourceRefs": [
+            "s01"
+          ],
+          "adaptationTag": "original",
+          "wordCount": 3,
+          "audio": {
+            "status": "notGenerated",
+            "assetId": null,
+            "alignmentSource": "none"
+          }
+        },
+        {
+          "id": "u03",
+          "speakerId": "bibi",
+          "kind": "dialogue",
+          "language": "en",
+          "text": "Is this your hat?",
+          "supportText": "这是你的帽子吗？",
+          "revision": 1,
+          "textHash": "5ab09995318622f4566643501e352c3330a9edc48740b799426626985c25e26e",
+          "sourceRefs": [
+            "s03"
+          ],
+          "adaptationTag": "original",
+          "wordCount": 4,
+          "audio": {
+            "status": "notGenerated",
+            "assetId": null,
+            "alignmentSource": "none"
+          }
+        },
+        {
+          "id": "u04",
+          "speakerId": "dodo",
+          "kind": "dialogue",
+          "language": "en",
+          "text": "No, it is a box.",
+          "supportText": "不，它是一个盒子。",
+          "revision": 1,
+          "textHash": "47f230462c45065ef777b6fb9dc144fd6524ee8a41a96170f7772cf05358a239",
+          "sourceRefs": [
+            "s03"
+          ],
+          "adaptationTag": "original",
+          "wordCount": 5,
+          "audio": {
+            "status": "notGenerated",
+            "assetId": null,
+            "alignmentSource": "none"
+          }
+        },
+        {
+          "id": "u05",
+          "speakerId": "bibi",
+          "kind": "dialogue",
+          "language": "en",
+          "text": "Here is your hat.",
+          "supportText": "你的帽子在这里。",
+          "revision": 1,
+          "textHash": "8d0acb1507067eab506fa4adf552c342ad6b9ddd6a433cd5825ff7483dffe629",
+          "sourceRefs": [
+            "s04"
+          ],
+          "adaptationTag": "original",
+          "wordCount": 4,
+          "audio": {
+            "status": "notGenerated",
+            "assetId": null,
+            "alignmentSource": "none"
+          }
+        },
+        {
+          "id": "u06",
+          "speakerId": "dodo",
+          "kind": "dialogue",
+          "language": "en",
+          "text": "Thank you!",
+          "supportText": "谢谢你！",
+          "revision": 1,
+          "textHash": "3afdda2c098fc8346a9f2e0ba06ec9c6188411cf78cc7934cfd8b666ce632f55",
+          "sourceRefs": [
+            "s05"
+          ],
+          "adaptationTag": "original",
+          "wordCount": 2,
+          "audio": {
+            "status": "notGenerated",
+            "assetId": null,
+            "alignmentSource": "none"
+          }
+        },
+        {
+          "id": "u07",
+          "speakerId": "narrator",
+          "kind": "word",
+          "language": "en",
+          "text": "hat",
+          "supportText": "帽子",
+          "revision": 1,
+          "textHash": "18e1dd392168f601d0e568612a2bf40e6555c033e033b580ae6627d8aeee1150",
+          "sourceRefs": [
+            "s01"
+          ],
+          "adaptationTag": "original",
+          "wordCount": 1,
+          "audio": {
+            "status": "notGenerated",
+            "assetId": null,
+            "alignmentSource": "none"
+          }
+        },
+        {
+          "id": "u08",
+          "speakerId": "narrator",
+          "kind": "word",
+          "language": "en",
+          "text": "box",
+          "supportText": "盒子",
+          "revision": 1,
+          "textHash": "26f8567f2569182294c3fa5b9f9cb2270b554eef628b4c149cf82a42888ff4ae",
+          "sourceRefs": [
+            "s02"
+          ],
+          "adaptationTag": "original",
+          "wordCount": 1,
+          "audio": {
+            "status": "notGenerated",
+            "assetId": null,
+            "alignmentSource": "none"
+          }
+        },
+        {
+          "id": "u09",
+          "speakerId": "narrator",
+          "kind": "word",
+          "language": "en",
+          "text": "red",
+          "supportText": "红色",
+          "revision": 1,
+          "textHash": "b1f51a511f1da0cd348b8f8598db32e61cb963e5fc69e2b41485bf99590ed75a",
+          "sourceRefs": [
+            "s01"
+          ],
+          "adaptationTag": "original",
+          "wordCount": 1,
+          "audio": {
+            "status": "notGenerated",
+            "assetId": null,
+            "alignmentSource": "none"
+          }
+        }
+      ],
+      "audioOrder": [
+        "u01",
+        "u02",
+        "u03",
+        "u04",
+        "u05",
+        "u06"
+      ],
+      "pages": [
+        {
+          "id": "page-1",
+          "role": "comic",
+          "titleZh": "红帽子在哪里？",
+          "screenLayout": "portrait",
+          "printLayout": "a4Portrait",
+          "artBriefZh": "",
+          "imageAssetId": null,
+          "panels": [
+            {
+              "id": "panel-1",
+              "readingOrder": 1,
+              "bounds": {
+                "x": 0.04,
+                "y": 0.07,
+                "w": 0.44,
+                "h": 0.26
+              },
+              "characterIds": [
+                "dodo",
+                "bibi"
+              ],
+              "sourceRefs": [
+                "s01"
+              ],
+              "actionZh": "小熊展示帽子",
+              "emotionZh": "开心",
+              "artBriefZh": "公园入口，小熊豆豆蓝色短背带裤，红帽子在手上，旁边小兔米米穿绿色短袖裙。只有一顶纯红帽子。",
+              "imageAssetId": null,
+              "soundEffects": [],
+              "bubbles": [
+                {
+                  "id": "bubble-1-1",
+                  "utteranceId": "u01",
+                  "kind": "speech",
+                  "bounds": {
+                    "x": 0.04,
+                    "y": 0.04,
+                    "w": 0.85,
+                    "h": 0.23
+                  }
+                },
+                {
+                  "id": "bubble-1-2",
+                  "utteranceId": "u02",
+                  "kind": "speech",
+                  "bounds": {
+                    "x": 0.04,
+                    "y": 0.31,
+                    "w": 0.85,
+                    "h": 0.23
+                  }
+                }
+              ]
+            },
+            {
+              "id": "panel-2",
+              "readingOrder": 2,
+              "bounds": {
+                "x": 0.52,
+                "y": 0.07,
+                "w": 0.44,
+                "h": 0.26
+              },
+              "characterIds": [
+                "dodo",
+                "bibi"
+              ],
+              "sourceRefs": [
+                "s02"
+              ],
+              "actionZh": "风吹走帽子",
+              "emotionZh": "惊讶",
+              "artBriefZh": "红帽子向画面右上方飘，角色伸手，没有第二顶帽子。背景绿色盒子和灰石各一个；预留动态线，图片不写字。",
+              "imageAssetId": null,
+              "soundEffects": [
+                "呼！"
+              ],
+              "bubbles": []
+            },
+            {
+              "id": "panel-3",
+              "readingOrder": 3,
+              "bounds": {
+                "x": 0.04,
+                "y": 0.36,
+                "w": 0.44,
+                "h": 0.26
+              },
+              "characterIds": [
+                "dodo",
+                "bibi"
+              ],
+              "sourceRefs": [
+                "s03"
+              ],
+              "actionZh": "小兔指向盒子",
+              "emotionZh": "好奇",
+              "artBriefZh": "米米蹲在绿色盒子旁，明确指向盒子，豆豆看着她。帽子仍在树枝上。",
+              "imageAssetId": null,
+              "soundEffects": [],
+              "bubbles": [
+                {
+                  "id": "bubble-3-1",
+                  "utteranceId": "u03",
+                  "kind": "speech",
+                  "bounds": {
+                    "x": 0.04,
+                    "y": 0.04,
+                    "w": 0.85,
+                    "h": 0.23
+                  }
+                }
+              ]
+            },
+            {
+              "id": "panel-4",
+              "readingOrder": 4,
+              "bounds": {
+                "x": 0.52,
+                "y": 0.36,
+                "w": 0.44,
+                "h": 0.26
+              },
+              "characterIds": [
+                "dodo",
+                "bibi"
+              ],
+              "sourceRefs": [
+                "s03"
+              ],
+              "actionZh": "小熊摇头",
+              "emotionZh": "轻松解释",
+              "artBriefZh": "豆豆摇头并指向绿色盒子，米米恍然大悟；盒子不可变成帽子。",
+              "imageAssetId": null,
+              "soundEffects": [],
+              "bubbles": [
+                {
+                  "id": "bubble-4-1",
+                  "utteranceId": "u04",
+                  "kind": "speech",
+                  "bounds": {
+                    "x": 0.04,
+                    "y": 0.04,
+                    "w": 0.85,
+                    "h": 0.23
+                  }
+                }
+              ]
+            },
+            {
+              "id": "panel-5",
+              "readingOrder": 5,
+              "bounds": {
+                "x": 0.04,
+                "y": 0.6499999999999999,
+                "w": 0.44,
+                "h": 0.26
+              },
+              "characterIds": [
+                "dodo",
+                "bibi"
+              ],
+              "sourceRefs": [
+                "s04"
+              ],
+              "actionZh": "小兔递回红帽子",
+              "emotionZh": "高兴",
+              "artBriefZh": "米米已经从低枝取下唯一红帽子，站在地面递给豆豆，不画危险攀爬。",
+              "imageAssetId": null,
+              "soundEffects": [],
+              "bubbles": [
+                {
+                  "id": "bubble-5-1",
+                  "utteranceId": "u05",
+                  "kind": "speech",
+                  "bounds": {
+                    "x": 0.04,
+                    "y": 0.04,
+                    "w": 0.85,
+                    "h": 0.23
+                  }
+                }
+              ]
+            },
+            {
+              "id": "panel-6",
+              "readingOrder": 6,
+              "bounds": {
+                "x": 0.52,
+                "y": 0.6499999999999999,
+                "w": 0.44,
+                "h": 0.26
+              },
+              "characterIds": [
+                "dodo",
+                "bibi"
+              ],
+              "sourceRefs": [
+                "s05"
+              ],
+              "actionZh": "小熊道谢，看见帽上的小访客",
+              "emotionZh": "惊喜",
+              "artBriefZh": "豆豆接到帽子，笑着道谢；帽檐上一只小瓢虫。两位角色都能看见它，细节用于下一页找物。",
+              "imageAssetId": null,
+              "soundEffects": [],
+              "bubbles": [
+                {
+                  "id": "bubble-6-1",
+                  "utteranceId": "u06",
+                  "kind": "speech",
+                  "bounds": {
+                    "x": 0.04,
+                    "y": 0.04,
+                    "w": 0.85,
+                    "h": 0.23
+                  }
+                }
+              ]
+            }
+          ],
+          "utteranceIds": [],
+          "vocabularyIds": [],
+          "activityIds": [],
+          "sourcePanelIds": [],
+          "targetObjects": []
+        },
+        {
+          "id": "page-2",
+          "role": "panorama",
+          "titleZh": "找到小访客",
+          "screenLayout": "landscape",
+          "printLayout": "a4Portrait",
+          "artBriefZh": "回看找到帽子之后的公园大场景。唯一红帽子在豆豆手上，绿色盒子、灰石各一个，帽檐上有一只小瓢虫。按实际图片校准热点。",
+          "imageAssetId": null,
+          "panels": [],
+          "utteranceIds": [],
+          "vocabularyIds": [],
+          "activityIds": [],
+          "sourcePanelIds": [],
+          "targetObjects": [
+            {
+              "id": "object-hat",
+              "labelZh": "红帽子",
+              "vocabularyId": "v-hat",
+              "appearanceZh": "唯一纯红帽子，在豆豆手上",
+              "expectedCount": 1,
+              "bounds": {
+                "x": 0.4,
+                "y": 0.38,
+                "w": 0.18,
+                "h": 0.19
+              },
+              "verificationStatus": "proposed"
+            },
+            {
+              "id": "object-box",
+              "labelZh": "绿盒子",
+              "vocabularyId": "v-box",
+              "appearanceZh": "地面唯一绿色盒子",
+              "expectedCount": 1,
+              "bounds": {
+                "x": 0.08,
+                "y": 0.72,
+                "w": 0.15,
+                "h": 0.15
+              },
+              "verificationStatus": "proposed"
+            },
+            {
+              "id": "object-bug",
+              "labelZh": "小瓢虫",
+              "vocabularyId": null,
+              "appearanceZh": "帽檐上只有一只小瓢虫，仅作中文找物",
+              "expectedCount": 1,
+              "bounds": {
+                "x": 0.48,
+                "y": 0.4,
+                "w": 0.04,
+                "h": 0.05
+              },
+              "verificationStatus": "proposed"
+            }
+          ]
+        },
+        {
+          "id": "page-3",
+          "role": "words",
+          "titleZh": "看图学三个词",
+          "screenLayout": "portrait",
+          "printLayout": "a4Portrait",
+          "artBriefZh": "",
+          "imageAssetId": null,
+          "panels": [],
+          "utteranceIds": [],
+          "vocabularyIds": [
+            "v-hat",
+            "v-box",
+            "v-red"
+          ],
+          "activityIds": [],
+          "sourcePanelIds": [],
+          "targetObjects": []
+        },
+        {
+          "id": "page-4",
+          "role": "readAlong",
+          "titleZh": "听一句，读一句",
+          "screenLayout": "portrait",
+          "printLayout": "a4Portrait",
+          "artBriefZh": "",
+          "imageAssetId": null,
+          "panels": [],
+          "utteranceIds": [
+            "u01",
+            "u02",
+            "u03",
+            "u04",
+            "u05",
+            "u06"
+          ],
+          "vocabularyIds": [],
+          "activityIds": [],
+          "sourcePanelIds": [],
+          "targetObjects": []
+        },
+        {
+          "id": "page-5",
+          "role": "activity",
+          "titleZh": "一起演一演",
+          "screenLayout": "portrait",
+          "printLayout": "a4Portrait",
+          "artBriefZh": "",
+          "imageAssetId": null,
+          "panels": [],
+          "utteranceIds": [],
+          "vocabularyIds": [],
+          "activityIds": [
+            "activity-1",
+            "activity-2",
+            "activity-3"
+          ],
+          "sourcePanelIds": [
+            "panel-1",
+            "panel-3",
+            "panel-6"
+          ],
+          "targetObjects": []
+        }
+      ],
+      "vocabulary": [
+        {
+          "id": "v-hat",
+          "lemma": "hat",
+          "displayText": "hat",
+          "meaningZh": "帽子",
+          "isFocus": true,
+          "newToReader": true,
+          "pronunciationUtteranceId": "u07",
+          "exampleUtteranceId": "u01",
+          "ipa": null,
+          "ipaSource": null,
+          "imageSource": {
+            "kind": "object",
+            "id": "object-hat"
+          }
+        },
+        {
+          "id": "v-box",
+          "lemma": "box",
+          "displayText": "box",
+          "meaningZh": "盒子",
+          "isFocus": true,
+          "newToReader": true,
+          "pronunciationUtteranceId": "u08",
+          "exampleUtteranceId": "u04",
+          "ipa": null,
+          "ipaSource": null,
+          "imageSource": {
+            "kind": "object",
+            "id": "object-box"
+          }
+        },
+        {
+          "id": "v-red",
+          "lemma": "red",
+          "displayText": "red",
+          "meaningZh": "红色",
+          "isFocus": true,
+          "newToReader": false,
+          "pronunciationUtteranceId": "u09",
+          "exampleUtteranceId": "u02",
+          "ipa": null,
+          "ipaSource": null,
+          "imageSource": {
+            "kind": "object",
+            "id": "object-hat"
+          }
+        }
+      ],
+      "activities": [
+        {
+          "id": "activity-1",
+          "kind": "fillBubble",
+          "promptZh": "看第1格，补出帽子的英语。先说出来也可以。",
+          "utteranceIds": [
+            "u01"
+          ],
+          "blankTokenIndices": [
+            3
+          ],
+          "targetObjectIds": [],
+          "roleIds": [],
+          "answer": "hat",
+          "answerVisibility": "parentOnly",
+          "evidenceRefs": [
+            {
+              "kind": "utterance",
+              "id": "u01"
+            }
+          ],
+          "verificationStatus": "draft"
+        },
+        {
+          "id": "activity-2",
+          "kind": "findObject",
+          "promptZh": "在大场景里找一找唯一的红帽子。",
+          "utteranceIds": [],
+          "blankTokenIndices": [],
+          "targetObjectIds": [
+            "object-hat"
+          ],
+          "roleIds": [],
+          "answer": "object-hat",
+          "answerVisibility": "parentOnly",
+          "evidenceRefs": [
+            {
+              "kind": "object",
+              "id": "object-hat"
+            }
+          ],
+          "verificationStatus": "unverified"
+        },
+        {
+          "id": "activity-3",
+          "kind": "rolePlay",
+          "promptZh": "孩子演豆豆，家长演米米；说到自己的句子时再开口。",
+          "utteranceIds": [
+            "u01",
+            "u02",
+            "u03",
+            "u04",
+            "u05",
+            "u06"
+          ],
+          "blankTokenIndices": [],
+          "targetObjectIds": [],
+          "roleIds": [
+            "dodo",
+            "bibi"
+          ],
+          "answer": null,
+          "answerVisibility": "none",
+          "evidenceRefs": [
+            {
+              "kind": "utterance",
+              "id": "u01"
+            },
+            {
+              "kind": "utterance",
+              "id": "u02"
+            },
+            {
+              "kind": "utterance",
+              "id": "u03"
+            },
+            {
+              "kind": "utterance",
+              "id": "u04"
+            },
+            {
+              "kind": "utterance",
+              "id": "u05"
+            },
+            {
+              "kind": "utterance",
+              "id": "u06"
+            }
+          ],
+          "verificationStatus": "draft"
+        }
+      ],
+      "reviewNotes": [
+        "这是原创分镜数据，尚无实际插画或音频。",
+        "热点位置只是提议，必须在真实图片上校准。",
+        "3个重点词包含红色复习词；相对手工演示词表有hat和box两个新词。",
+        "未经过儿童试读；语言档案不是对实际孩子能力的判断。"
+      ]
+    }
+  ],
+  "assets": []
+}

@@ -1,0 +1,17 @@
+# Git/tool fixed-name file; named documents and assets use versioned filenames.
+.DS_Store
+.venv/
+.venv*/
+__pycache__/
+*.pyc
+.env
+.env.*
+private/
+私有/
+*.pdf
+*.mp4
+*.mp3
+*.wav
+*.m4a
+# Preserve the original local design without its machine-specific source link in Git.
+/docs/第一章内容设计v1.0.md
